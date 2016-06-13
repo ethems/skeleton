@@ -20783,7 +20783,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  color: red; }\n", ""]);
+	exports.push([module.id, "\r\n", ""]);
 
 	// exports
 
