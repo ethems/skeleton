@@ -56,8 +56,11 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      'Hellosss  ',
-	      this.props.name
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Napiyoruz ?'
+	      )
 	    );
 	  }
 	});
