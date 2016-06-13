@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+
+
 var HelloMessage = React.createClass({
   render: function() {
     return (
@@ -10,5 +12,9 @@ var HelloMessage = React.createClass({
     );
   }
 });
+
+
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
 
 ReactDOM.render(<HelloMessage/>,document.getElementById('app'));
