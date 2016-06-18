@@ -1,5 +1,6 @@
 require('style!css!foundation-sites/dist/foundation.min.css');
 require('style!css!sass!./styles/app.scss');
+require('style!css!sass!./styles/left-panel.scss')
 
 
 import React from 'react';
