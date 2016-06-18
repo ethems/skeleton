@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
 import {reducer as form} from 'redux-form';
 
+import {pageReducer as page} from './page-reducer';
+
 const rootReducer = combineReducers({
-    state: (state = {}) => state
+    page
 });
 
 export default rootReducer;
