@@ -1,8 +1,3 @@
-require('style!css!foundation-sites/dist/foundation.min.css');
-require('style!css!sass!./styles/app.scss');
-require('style!css!sass!./styles/left-panel.scss')
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -12,6 +7,18 @@ import reduxThunk from 'redux-thunk';
 
 import reducers from './reducers';
 import App from './components/app'
+
+
+
+require('style!css!foundation-sites/dist/foundation.min.css');
+require('style!css!sass!./styles/app.scss');
+require('style!css!sass!./styles/left-panel.scss')
+
+
+
+
+
+
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store= createStoreWithMiddleware(reducers);
