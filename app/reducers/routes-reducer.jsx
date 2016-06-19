@@ -2,11 +2,14 @@ const defaultRoutes=[
   {
     path:'/',
     text:'Gonderiler',
-    name:'lists' },
+    name:'posts',
+    index:true
+   },
   {
     path:'/statistics',
     text:'Istatistikler',
-    name:'statistics'},
+    name:'statistics'
+  },
   {
     path:'/discussions',
      text:'Tartismalar',

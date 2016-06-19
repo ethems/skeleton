@@ -7,9 +7,10 @@ class App extends Component {
     return (
       <div className="expanded row">
         <div className="small-2 columns">
-          <LeftPanel/>
+          <LeftPanel location={this.props.location}/>
         </div>
         <div className="small-8 columns">
+          {this.props.children}
         </div>
         <div className="small-2 columns">
         </div>

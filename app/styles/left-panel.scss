@@ -13,8 +13,13 @@
   }
   .left-panel-link{
     margin-top: 50px;
-
-    .lists:before{
+    i{
+      color: #DDDDDC;
+    }
+    .active i{
+      color:#62BDFD;
+    }
+    .posts:before{
       content: "format_list_numbered"
     }
     .statistics:before{
@@ -27,6 +32,10 @@
 
     .discussions::before{
       content:"question_answer"
+    }
+    .has-tip{
+      border-bottom: 0px;
+      cursor: pointer;
     }
 
   }
