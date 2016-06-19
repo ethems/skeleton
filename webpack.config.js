@@ -34,7 +34,7 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/
             },
-            {test: /\.(jpg|png)$/,loader: 'url?limit=25000'}
+            {test: /\.(jpg|png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,loader: 'url?limit=100000'}
         ]
     }
 };

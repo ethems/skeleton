@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 import {reducer as form} from 'redux-form';
 
-import {pageReducer as page} from './page-reducer';
+import routesReducer   from './routes-reducer';
 
 const rootReducer = combineReducers({
-    page
+    routes:routesReducer
 });
 
 export default rootReducer;
