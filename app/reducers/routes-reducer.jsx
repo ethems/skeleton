@@ -8,9 +8,9 @@ const defaultRoutes=[
     text:'Istatistikler',
     name:'statistics'},
   {
-    path:'/discussion',
+    path:'/discussions',
      text:'Tartismalar',
-      name:'discussion'
+      name:'discussions'
     },
   {
     path:'/messages',

@@ -13,5 +13,22 @@
   }
   .left-panel-link{
     margin-top: 50px;
+
+    .lists:before{
+      content: "format_list_numbered"
+    }
+    .statistics:before{
+      content: "show_chart"
+    }
+
+    .messages:before{
+      content: "mail"
+    }
+
+    .discussions::before{
+      content:"question_answer"
+    }
+
   }
+
 }

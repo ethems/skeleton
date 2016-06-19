@@ -10,8 +10,8 @@ class LeftPanel extends Component{
     return routes.map(route=>{
       return (
         <li className="left-panel-link" key={route.name}>
-          <Link className={route.name} to={route.path}>
-            <i className="material-icons">face</i>
+          <Link to={route.path}>
+            <i className={route.name + " material-icons md-48 "}></i>
           </Link>
       </li>);
     })
