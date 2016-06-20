@@ -27740,7 +27740,7 @@
 /* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -27778,19 +27778,6 @@
 	  }
 
 	  _createClass(LeftPanel, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.bindToolTip();
-	    }
-	  }, {
-	    key: 'bindToolTip',
-	    value: function bindToolTip() {
-
-	      $('.has-tip').each(function (element) {
-	        new Foundation.Tooltip($(this));
-	      });
-	    }
-	  }, {
 	    key: 'renderLinks',
 	    value: function renderLinks(routes) {
 	      return routes.map(function (route, index) {
@@ -27802,8 +27789,13 @@
 	            { to: route.path, onlyActiveOnIndex: true, activeClassName: 'active' },
 	            _react2.default.createElement(
 	              'span',
-	              { 'data-tooltip': true, 'aria-haspopup': 'true', className: 'has-tip right', 'data-disable-hover': 'false', tabindex: '1', title: route.text },
-	              _react2.default.createElement('i', { className: route.name + " material-icons md-48 " })
+	              null,
+	              _react2.default.createElement('i', { className: route.name + " material-icons md-48 " }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'text-location' },
+	                route.text
+	              )
 	            )
 	          )
 	        );
@@ -27843,7 +27835,6 @@
 	};
 
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(LeftPanel);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ },
 /* 264 */
@@ -31616,7 +31607,7 @@
 
 
 	// module
-	exports.push([module.id, ".left-panel ul {\n  list-style-type: none;\n  margin-top: 50px; }\n\n.left-panel .logo {\n  display: block;\n  background-image: url(" + __webpack_require__(325) + ");\n  background-repeat: no-repeat;\n  background-size: contain;\n  width: auto;\n  height: 150px; }\n\n.left-panel .left-panel-link {\n  margin-top: 50px; }\n  .left-panel .left-panel-link i {\n    color: #DDDDDC; }\n  .left-panel .left-panel-link .active i {\n    color: #62BDFD; }\n  .left-panel .left-panel-link .posts:before {\n    content: \"format_list_numbered\"; }\n  .left-panel .left-panel-link .statistics:before {\n    content: \"show_chart\"; }\n  .left-panel .left-panel-link .messages:before {\n    content: \"mail\"; }\n  .left-panel .left-panel-link .discussions::before {\n    content: \"question_answer\"; }\n  .left-panel .left-panel-link .has-tip {\n    border-bottom: 0px;\n    cursor: pointer; }\n", ""]);
+	exports.push([module.id, ".left-panel ul {\n  list-style-type: none;\n  margin-top: 50px; }\n\n.left-panel .logo {\n  display: block;\n  background-image: url(" + __webpack_require__(325) + ");\n  background-repeat: no-repeat;\n  background-size: contain;\n  width: auto;\n  height: 150px; }\n\n.left-panel .left-panel-link {\n  margin-top: 50px; }\n  .left-panel .left-panel-link i {\n    color: #DDDDDC; }\n  .left-panel .left-panel-link .active i {\n    color: #62BDFD; }\n  .left-panel .left-panel-link .posts:before {\n    content: \"format_list_numbered\"; }\n  .left-panel .left-panel-link .statistics:before {\n    content: \"show_chart\"; }\n  .left-panel .left-panel-link .messages:before {\n    content: \"mail\"; }\n  .left-panel .left-panel-link .discussions::before {\n    content: \"question_answer\"; }\n  .left-panel .left-panel-link .text-location {\n    display: block;\n    width: auto;\n    color: #DDDDDC;\n    font-size: 12px; }\n  .left-panel .left-panel-link .active .text-location {\n    color: #62BDFD; }\n", ""]);
 
 	// exports
 
@@ -31662,7 +31653,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'Material Icons';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(328) + ");\n  /* For IE6-8 */\n  src: local(\"Material Icons\"), local(\"MaterialIcons-Regular\"), url(" + __webpack_require__(329) + ") format(\"woff2\"), url(" + __webpack_require__(330) + ") format(\"woff\"), url(" + __webpack_require__(331) + ") format(\"truetype\"); }\n\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  /* Preferred icon size */\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n  /* Support for IE. */\n  font-feature-settings: 'liga'; }\n\n.material-icons.md-18 {\n  font-size: 18px; }\n\n.material-icons.md-24 {\n  font-size: 24px; }\n\n.material-icons.md-36 {\n  font-size: 36px; }\n\n.material-icons.md-48 {\n  font-size: 48px; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'Material Icons';\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + __webpack_require__(328) + ");\n  /* For IE6-8 */\n  src: local(\"Material Icons\"), local(\"MaterialIcons-Regular\"), url(" + __webpack_require__(329) + ") format(\"woff2\"), url(" + __webpack_require__(330) + ") format(\"woff\"), url(" + __webpack_require__(331) + ") format(\"truetype\"); }\n\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  /* Preferred icon size */\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n  /* Support for IE. */\n  font-feature-settings: 'liga'; }\n\n.material-icons.md-18 {\n  font-size: 18px; }\n\n.material-icons.md-24 {\n  font-size: 24px; }\n\n.material-icons.md-36 {\n  font-size: 36px; }\n\n.material-icons.md-48 {\n  font-size: 48px; }\n\n.material-icons.md-54 {\n  font-size: 54px; }\n", ""]);
 
 	// exports
 

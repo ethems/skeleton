@@ -33,9 +33,14 @@
     .discussions::before{
       content:"question_answer"
     }
-    .has-tip{
-      border-bottom: 0px;
-      cursor: pointer;
+    .text-location{
+        display: block;
+        width: auto;
+        color:#DDDDDC;
+        font-size:12px;
+    }
+    .active .text-location{
+      color:#62BDFD;
     }
 
   }

@@ -10,25 +10,17 @@ class LeftPanel extends Component{
     super(props);
   }
 
-  componentDidMount(){
-    this.bindToolTip();
-  }
-
-  bindToolTip(){
-
-    $('.has-tip').each(function(element){
-         new Foundation.Tooltip($(this));
-    });
-
-  }
 
   renderLinks(routes){
     return routes.map((route,index)=>{
       return (
         <li className="left-panel-link" key={route.name}>
           <Link to={route.path} onlyActiveOnIndex  activeClassName="active" >
-            <span data-tooltip aria-haspopup="true"  className="has-tip right" data-disable-hover="false" tabindex="1" title={route.text}>
+            <span>
               <i className={route.name + " material-icons md-48 "}></i>
+              <div className="text-location">
+                {route.text}
+              </div>
             </span>
           </Link>
       </li>);
